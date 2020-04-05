@@ -2,7 +2,7 @@
 
 module.exports = {
   url: 'https://nabdali.github.io',
-  pathPrefix: '/',
+  pathPrefix: '',
   title: 'Blog by Ali Boulajine',
   subtitle: 'Un blog tech. mais pas que !',
   copyright: '© All rights reserved.',
