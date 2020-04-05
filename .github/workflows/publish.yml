@@ -3,7 +3,7 @@ name: Publish
 on:
   push:
     branches:
-      - master
+      - redaction
 
 jobs:
   build:
