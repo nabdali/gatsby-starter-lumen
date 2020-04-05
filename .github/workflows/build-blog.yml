@@ -36,6 +36,6 @@ jobs:
         git init
         git config user.name nabdali
         git config user.email nabdali@users.noreply.github.com
-        gh-pages -r https://${{secrets.GITHUB_TOKEN}}@github.com/nabdali/nabdali.github.io.git -b master
+        gh-pages -d . -r https://${{secrets.GITHUB_TOKEN}}@github.com/nabdali/nabdali.github.io.git -b master
       env:
         CI: true
