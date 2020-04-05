@@ -32,7 +32,7 @@ jobs:
     - 
       name: Publish
       run: |
-        git config user.name nabdali && 
+        git config user.name nabdali
         git config user.email nabdali@users.noreply.github.com
         gh-pages -d public -r https://${{ secrets.GITHUB_TOKEN }}@github.com/nabdali/nabdali.github.io.git -b master
       env:
