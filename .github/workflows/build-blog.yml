@@ -30,7 +30,7 @@ jobs:
     - run: yarn run test --runInBand --no-cache
     -
       name: Build
-      run: gatsby build --prefix-paths
+      run: ./node_modules/gatsby/dist/bin/gatsby.js build --prefix-paths
     - 
       name: Publish
       run: gh-pages -d public -r https://${{ secrets.GITHUB_TOKEN }}@github.com/nabdali/nabdali.github.io.git -b master
