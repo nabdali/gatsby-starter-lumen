@@ -25,12 +25,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install -g yarn
-    - run: yarn install --frozen-lockfile
+    - run: yarn install --frozen-lockfile gh-pages
     - run: yarn run lint
     - run: yarn run test --runInBand --no-cache
     - 
       name: Publish
-      run: yarn install gh-pages
       run: gh-pages -d public -r https://${{ secrets.GITHUB_TOKEN }}@github.com/nabdali/nabdali.github.io.git -b master
       env:
         CI: true
