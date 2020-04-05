@@ -31,6 +31,11 @@ jobs:
       run: gatsby build --prefix-paths
     - 
       name: Publish
-      run: gh-pages -d public -r https://${{ secrets.ACCESS_TOKEN }}@github.com/nabdali/nabdali.github.io.git -b master
+      run: |
+        cd public
+        git init
+        git config user.name nabdali
+        git config user.email nabdali@users.noreply.github.com
+        gh-pages -d . -r https://${{secrets.ACCESS_TOKEN}}@github.com/nabdali/nabdali.github.io.git -b master
       env:
         CI: true
