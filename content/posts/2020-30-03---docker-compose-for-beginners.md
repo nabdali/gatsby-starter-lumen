@@ -8,6 +8,7 @@ category: "devops"
 tags:
   - "docker"
   - "dev"
+  - "docker-compose"
 description: "Facilitez l'installation de l'environement de dev pour votre application, ainsi que sont intégration jusqu'au déploiement"
 socialImage: "/media/docker-compose-for-beginners-social.jpg"
 ---
