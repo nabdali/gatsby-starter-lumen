@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://nabdali.github.io/blog',
+  url: 'https://nabdali.github.io',
   pathPrefix: '/',
   title: 'Blog by Ali Boulajine',
   subtitle: 'Un blog tech. mais pas que !',
