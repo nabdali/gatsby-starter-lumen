@@ -1,14 +1,14 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://nabdali.github.io/blog',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'Blog by Ali Boulajine',
+  subtitle: 'Un blog tech. mais pas que !',
   copyright: '© All rights reserved.',
-  disqusShortname: '',
+  disqusShortname: 'nabdali-blog',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-82076828-2',
   useKatex: false,
   menu: [
     {
@@ -16,30 +16,30 @@ module.exports = {
       path: '/'
     },
     {
-      label: 'About me',
+      label: 'À propos de moi',
       path: '/pages/about'
     },
     {
-      label: 'Contact me',
+      label: 'Me contacter',
       path: '/pages/contacts'
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Ali Boulajine',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Développeur 👨‍🔬 et passioné d\'éléctronique 🤖, j\'aime la nature et surtout la montagne ⛰️',
     contacts: {
       email: '',
-      facebook: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
+      facebook: '',
+      telegram: '',
+      twitter: 'nabda101010',
+      github: 'nabdali',
       rss: '',
       vkontakte: '',
-      linkedin: '#',
-      instagram: '#',
+      linkedin: 'abdelali-boulajine',
+      instagram: '',
       line: '',
-      gitlab: '',
+      gitlab: 'nabda',
       weibo: '',
       codepen: '',
       youtube: '',
