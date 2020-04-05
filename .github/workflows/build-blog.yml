@@ -24,13 +24,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install -g yarn gh-pages
+    - run: npm install -g yarn gh-pages gatsby
     - run: yarn install --frozen-lockfile
     - run: yarn run lint
     - run: yarn run test --runInBand --no-cache
     -
       name: Build
-      run: ./node_modules/gatsby/dist/bin/gatsby.js build --prefix-paths
+      run: gatsby build --prefix-paths
     - 
       name: Publish
       run: gh-pages -d public -r https://${{ secrets.GITHUB_TOKEN }}@github.com/nabdali/nabdali.github.io.git -b master
