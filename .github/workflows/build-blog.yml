@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Build blog
 
 on:
   push:
@@ -16,11 +16,11 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [10.x]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Run tests with following Node.js version ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
@@ -28,5 +28,9 @@ jobs:
     - run: yarn install --frozen-lockfile
     - run: yarn run lint
     - run: yarn run test --runInBand --no-cache
+    - 
+      name: Publish
+      run: yarn install gh-pages
+      run: gh-pages -d public -r https://${{ secrets.GITHUB_TOKEN }}@github.com/nabdali/nabdali.github.io.git -b master
       env:
         CI: true
